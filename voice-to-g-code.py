@@ -1,9 +1,8 @@
-import api
 import openai
 import json
 
-openai.organization = api.org()
-openai.api_key = api.key()
+openai.organization = # add
+openai.api_key = # add
 
 # voice to text
 def voice_to_text(audio_file):
