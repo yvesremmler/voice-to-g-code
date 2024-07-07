@@ -1,8 +1,10 @@
 import openai
 import json
 
+### Add your OpenAI API key and organization here ###
 openai.organization = # add
 openai.api_key = # add
+#####################################################
 
 # voice to text
 def voice_to_text(audio_file):
@@ -32,7 +34,7 @@ def text_to_g(text):
     '''
     text = 'make the folling in g-code: ' + text['text']
     response = openai.ChatCompletion.create(
-        model="gpt-4",
+        model="gpt-4o",
         messages=[
             {"role":"system", "content":"You program a 3D printer using G-Code. You just return the code, you must not include any disclaimers or explainations outside of comments in the code."},
             {"role":"user", "content":text}
